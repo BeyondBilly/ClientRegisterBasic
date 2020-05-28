@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BaseDatosLeccionBedon</string>
+    <string name="registro_de_clientes_en_db">Registro de Clientes en DB</string>
+    <string name="ingrese_nombre">Ingrese Nombre</string>
+    <string name="ingrese_direccion">Ingrese Direccion</string>
+    <string name="registrar">Registrar</string>
+    <string name="selecciona_un_cliente">Selecciona un Cliente</string>
+    <string name="ver_cliente">Ver Cliente</string>
+    <string name="eliminar_cliente">Eliminar Cliente</string>
+    <string name="direccion">Direccion</string>
+</resources>

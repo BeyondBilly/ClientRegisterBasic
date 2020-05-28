@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DataBaseLessonBedon</string>
+    <string name="registro_de_clientes_en_db">Customer Registration in DB</string>
+    <string name="ingrese_nombre">Enter name</string>
+    <string name="ingrese_direccion">Enter Address</string>
+    <string name="registrar">Register</string>
+    <string name="selecciona_un_cliente">Select a Client</string>
+    <string name="ver_cliente">See Client</string>
+    <string name="eliminar_cliente">Delete Client</string>
+    <string name="direccion">Address</string>
+</resources>
