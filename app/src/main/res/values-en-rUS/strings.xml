@@ -9,4 +9,5 @@
     <string name="ver_cliente">See Client</string>
     <string name="eliminar_cliente">Delete Client</string>
     <string name="direccion">Address</string>
+    <string name="nombre">Name</string>
 </resources>

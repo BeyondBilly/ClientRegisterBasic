@@ -8,4 +8,6 @@
     <string name="ver_cliente">Ver Cliente</string>
     <string name="eliminar_cliente">Eliminar Cliente</string>
     <string name="direccion">Direccion</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
+    <string name="nombre">Nombre</string>
 </resources>

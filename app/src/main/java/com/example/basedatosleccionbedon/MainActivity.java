@@ -2,6 +2,8 @@ package com.example.basedatosleccionbedon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listaClientes = db.obtenerClientes();
 
         //Cargo la lista en el control spinner
-        spinnerAdaptador = new ArrayAdapter(this,
+        spinnerAdaptador = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item,listaClientes);
         spinClientes.setAdapter(spinnerAdaptador);
     }
@@ -90,6 +93,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             etxtNombreConsultado.setText("");
         }
     }
+
+    public void AbrirUbicacionMapa(View view){
+        String ubicacion = etxtDireccionConsultado.getText().toString();
+        Uri direccionUri = Uri.parse("geo: 0,0?q="+ubicacion);
+        Intent intent = new Intent(this, MapsActivity.class);
+        intent.putExtra("keyUbicacionEnviar", direccionUri);
+        startActivityForResult(intent,1);
+        }
+
+    /*
+    public void AbrirUbicacionMapa(View view){
+        String ubicacion = etxtDireccionConsultado.getText().toString();
+        Uri direccionUri = Uri.parse("geo: 0,0?q="+ubicacion);
+        Intent intent = new Intent(Intent.ACTION_VIEW, direccionUri);
+
+        if (intent.resolveActivity(getPackageManager()) !=null)
+            startActivity(intent);
+        else{
+            Toast mensaje = Toast.makeText(this,"No existe una actividad para responder el requerimiento.",
+                    Toast.LENGTH_LONG);
+            mensaje.show();
+        }
+    }
+    */
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
